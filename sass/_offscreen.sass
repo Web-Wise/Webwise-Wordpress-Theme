@@ -1,0 +1,50 @@
+#offscreen
+    position: fixed
+    padding: 20px
+    height: 100%
+    width: 250px
+    left:  -250px
+    z-index: 1
+    background: #2d2d2d
+    
+    transition: all 300ms ease
+    
+
+    &.active
+        //left: 0px
+        transform: translate3d(250px, 0px, 0px)
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
+    ul
+       
+        list-style: none
+        margin-left: 0
+        color: #fff
+        
+        
+        
+        li 
+            padding-top: 10px
+            padding-bottom: 10px
+            border-bottom: 1px solid #444
+            font-family: $header-font
+            vertical-align: middle
+            display: flex
+            align-items: center
+            i 
+                margin-right: 10px
+
+            &:last-child
+                border-bottom: 0
+    #close-menu-button
+        text-align: right
+        color: #aaa
+        
+#menu-button, #app-button
+    display: flex
+    align-items: center
+    justify-items: right
+#app-button
+    text-align: right
+
+
+     

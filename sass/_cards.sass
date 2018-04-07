@@ -1,0 +1,77 @@
+.loop-container
+  @media #{$small-down}
+    display: flex
+    flex-wrap: wrap
+    
+.card
+  box-shadow: $base-shadow
+  border-radius: 6px
+  transition: $normal-speed
+  overflow: hidden
+  margin-bottom: 1rem
+  display: flex
+  background-color: white
+  flex-flow: column nowrap
+  @media #{$small-down}
+    flex-flow: row wrap
+    flex-grow: 1  
+    min-width: 100%
+
+  &.dark
+    background-color: $blue
+    color: #fff
+    a
+      color: #fff
+
+  &.dark>.card-content p
+    color: #e0e0e0
+
+  &.dark>div.card-actions 
+    
+    background-color: darken($blue, 3%)
+    a
+      color: #e0e0e0
+  &.green
+    background-color: $green
+    color: #fff
+
+  &.green>.card-content p
+    color: #e0e0e0
+
+  &.green>div.card-actions 
+    background-color: darken($green, 3%)
+    a
+      color: #f0f0f0
+  
+  .card-content
+    padding: 1rem
+    
+
+  .card-title
+    display: block
+    font-size: 1.25rem
+        
+  .card-title, .card-actions, h2
+    font-family: $header-font  
+    font-weight: 600   
+
+  p
+    margin: 0
+    font-size: .875rem
+    color: rgba($font-color, 0.75)
+    
+
+  .card-image
+    img
+      display: block
+      object-fit: cover
+
+  .card-actions
+    display: block
+    margin-top: auto
+    padding: .75rem 1rem
+    border-top: solid 1px rgba($font-color, 0.15)
+
+
+  &:hover
+    box-shadow: $hover-shadow
